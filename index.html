@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--META TAG OG-->
+     <meta property="og:type" content="website"/>
+     <meta property="og:title" content="Padaria Araujo - O sonho não acabou mais ainda tem Pão!"/>
+     <meta property="og:image" content="http://127.0.0.1:5500/assets/logo.png"/>
+     <meta property="og:description" content="O melhor pão da região!"/>
+     <meta property="og:site_name" content="Padaria Araujo"/>
+
+     <link rel="shortcut icon" href="assets/icons.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ojuju:wght@200..800&family=Overlock:wght@400;700;900&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+    <link rel="stylesheet" href="./styles/output.css" />
+    <title>Cardapio</title>
+     </head>
+     <body>
+    <!--HEADER-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class=""></div> 
+        
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="assets/logo.png"
+          alt="logo"
+          class="w-52 h-52 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+
+        <h1 class="text-6xl mt-4 mb-2 font-black text-red-700">Padaria Araujo</h1>
+
+        <span class="text-black font-black"
+          >Rua travessa nova 25, Poá - SP</span
+        >
+
+        <div class="bg-yellow-300 px-4 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-black font-bold">
+            Seg á Dom - 06:00 às 21:00</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!--MENU-->
+    <h2 class="text-3xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça nosso Menu</h2>
+
+    <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Pães</h2>
+    </div>
+
+    <div id="menu">
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!--PRODUTOS-->
+        <div class="flex gap-2">
+          <img
+            src="assets/pao-frances1.jpg"
+            alt="paes"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Pão Francês</p>
+            <p class="text-sm">Com uma crosta crocante e uma massa macia e leve, esse pão é perfeito para ser consumido fresquinho, ainda quente, com manteiga, geleia ou queijo.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 1.50</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pão Francês"
+                data-price="1.50"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 2-->
+        <div class="flex gap-2">
+          <img
+            src="assets/pao de leite.jpg"
+            alt="paes"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Pão de Leite</p>
+            <p class="text-sm">Feito à base de farinha de trigo, leite, fermento e sal, o pão de leite possui uma textura mais macia e sabor mais adocicado.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 1.00</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pão de Leite"
+                data-price="1.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 3-->
+        <div class="flex gap-2">
+          <img
+            src="assets/pao de milho.jpg"
+            alt="paes"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div>
+            <p class="font-bold">Pão de Milho</p>
+            <p class="text-sm">Feito à base de farinha de trigo, milho, leite, fermento e sal, o pão de leite possui uma textura  macia.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 1.20</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Pão de Milho"
+                data-price="1.20"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 4-->
+        <div class="flex gap-2">
+          <img
+            src="assets/pao de hamburguer.jpg"
+            alt="paes"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Pão de Hamburguer</p>
+            <p class="text-sm">O pão de hambúrguer é um pão levemente dourado, macio e com a superfície lisa, ideal para lanches.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 2.00</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name=">Pão de Hamburguer"
+                data-price="2.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5-->
+        <div class="flex gap-2">
+            <img
+              src="assets/pao sovado.jpg"
+              alt="paes"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Pão Sovado</p>
+              <p class="text-sm">O pão sovado foi criado em Provença, na França, por isso também é conhecido como provence. Seu diferencial está no modo especial e mais trabalhoso de preparo. A massa precisa ser bastante sovada – e daí o nome mais popular – até que chegue ao ponto correto e adquira a textura característica.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 9.50</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name=">Pão Sovado"
+                  data-price="9.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6-->
+        <div class="flex gap-2">
+            <img
+              src="assets/pao de coco.jpg"
+              alt="paes"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Pão de Coco</p>
+              <p class="text-sm">O pão de coco é um pão levemente adocicado, macio e com coco em sua superfície, que o torna saboroso.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 2.20</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name=">Pão de Coco"
+                  data-price="2.20"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7-->
+        <div class="flex gap-2">
+            <img
+              src="assets/pao de creme.jpg"
+              alt="paes"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Pão de Creme</p>
+              <p class="text-sm">O pão de creme é um pão levemente adocicado, macio e com creme confeiteiro em sua superfície, que o torna saboroso.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 2.50</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name=">Pão de Creme"
+                  data-price="2.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8-->
+        <div class="flex gap-2">
+            <img
+              src="assets/vanderleia.jpg"
+              alt="paes"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Vanderleia</p>
+              <p class="text-sm">Pão comprido com a mesma composição do pão de creme, com um formato maior e comprido.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 10.90</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name=">Vanderleia"
+                  data-price="10.90"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9-->
+        <div class="flex gap-2">
+            <img
+              src="assets/sonho.jpg"
+              alt="paes"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Sonho</p>
+              <p class="text-sm">Sonho de padaria recheado de creme ou doce de leite, chantilly, goiabada etc.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 3.50</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name=">Sonho"
+                  data-price="3.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+      </main>
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl"></h2>
+      </div>
+
+      <!--Frios-->
+     
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl">Frios</h2>
+    </div>
+
+    <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu"
+  >
+      
+        <!-- 1-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="assets/mortadela.png"
+            alt="frios"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Mortadela</p>
+            <p class="text-sm">Mortadela Ouro Perdigão Saborosa 100gramas.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4.00</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Mortadela"
+                data-price="4.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!-- 2-->
+         <div class="flex gap-2 w-full">
+            <img
+              src="assets/queijo.png"
+              alt="frios"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Mussarela</p>
+              <p class="text-sm">Mussarela Italac 100gramas.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 6.00</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Mussarela"
+                  data-price="6.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <!-- 3-->
+         <div class="flex gap-2 w-full">
+            <img
+              src="assets/presunto.png"
+              alt="frios"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Presunto</p>
+              <p class="text-sm">Presunto Perdigão 100gramas.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 5.00</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Presunto"
+                  data-price="5.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+      <!--BEBIDAS-->
+     
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="font-bold text-3xl"> Bebidas</h2>
+       
+    </div>
+
+    <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu"
+  >
+      
+        <!-- 1-->
+        <div class="flex gap-2 w-full">
+          <img
+            src="assets/coffe-back.png"
+            alt="bebidas"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Café Preto</p>
+            <p class="text-sm">Copo de Café.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 3.00</p>
+
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Copo de Café"
+                data-price="3.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!-- 2-->
+         <div class="flex gap-2 w-full">
+            <img
+              src="assets/coffee.png"
+              alt="bebidas"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Café com Leite</p>
+              <p class="text-sm">Copo de Café com Leite.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 4.50</p>
+                
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Café com Leite"
+                  data-price="4.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <!-- 3-->
+        <div class="flex gap-2 w-full">
+            <img
+              src="assets/ACHOCOLATADO-TODDYNHO.png"
+              alt="bebidas"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Toddynho</p>
+              <p class="text-sm">Achocolatado.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 3.75</p>
+                
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Toddynho"
+                  data-price="3.75"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <!-- 4-->
+        <div class="flex gap-2 w-full">
+            <img
+              src="assets/suco.png"
+              alt="bebidas"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Suco</p>
+              <p class="text-sm">Suco Natuaral Laranja.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 8.00</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Suco"
+                  data-price="8.00"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <!-- 5-->
+        <div class="flex gap-2 w-full">
+            <img
+              src="assets/refri-1.png"
+              alt="bebidas"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Coca Cola</p>
+              <p class="text-sm">Refri Lata.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 7.50</p>
+                
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Coca Cola"
+                  data-price="7.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+           <!-- 6-->
+        <div class="flex gap-2 w-full">
+            <img
+              src="assets/refri-2.png"
+              alt="bebidas"
+              class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+            />
+  
+            <div class="w-full">
+              <p class="font-bold">Guaraná Antartica</p>
+              <p class="text-sm">Refri Lata.</p>
+  
+              <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 6.50</p>
+  
+                <button
+                  class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                  data-name="Guaraná Antartica"
+                  data-price="6.50"
+                >
+                  <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+      <!--MODAL-->
+      <div  class=" bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        <div class=" bg-white p-5 rounded-md min-w-[70%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+
+            <input type="text" placeholder="Digite seu Endereço completo" id="address" class="w-full boder-2 p-1 bg-red-100 rounded my-1"/>
+
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-red-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+        </div>
+
+      </div>
+    <!--Button footer-->
+
+    <footer class="w-full bg-yellow-300 py-2 fixed bottom-0 z-40 flex justify-center items-center ">
+        <button class="flex items-center gap-2 text-black font-bold" id="cart-btn">
+           (<span id="cart-count">0</span>) 
+        Meu carrinho
+        <i class="fa fa-cart-plus text-lg text-black"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+  </body>
+ 
+
+</html>
